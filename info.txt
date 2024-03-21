@@ -1,0 +1,6 @@
+estilos posibles:
+css in jsx
+styled components
+tailwind <- recomienda este
+boostrap    
+ant design
