@@ -4,3 +4,68 @@ styled components
 tailwind <- recomienda este
 boostrap    
 ant design
+
+
+**uso de props**
+<Usecard
+nombre={nombre}
+edad={edad}
+esProgramador={true}
+lenguajes={["js", "reactJS"]}
+direccion={{ direccion: "calle falsa", numero: 3400 }}
+/> 
+
+PARA CREAR UN CARRITO CON CONTADOR:
+contador:
+import { ShoppingCart } from "lucide-react";
+
+function NavBar() {
+    const [contador,setCounter] =useState(0)
+    const handleClick = () =>{
+        setCounter(contador +1)
+    }
+    return (
+        <nav className="hidden md:flex md:gap-4">
+            <a href="#" className="mr-4">Inicio</a>
+            <a href="#" className="mr-4">Mundo</a>
+
+            <div className="flex" onClick={handleClick}>
+            <a href="#" className="mr-4 ">Compras </a>
+            <ShoppingCart onClick={handleClick}>
+
+            </ShoppingCart>
+
+        </div>                     
+            <a href="#" className="mr-4">Contacto</a>
+            {/* <MenuOutlined/> */}
+            <Menu />
+           
+        </nav>
+    )
+}
+
+
+//const [count, setCount] = useState(0)
+ /* <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  ) */
