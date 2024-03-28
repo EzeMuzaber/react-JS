@@ -3,7 +3,7 @@ return(
   <footer className="bg-slate-500 text-white ">
 	<div className="container flex flex-col p-2 mx-auto md:p-1 lg:flex-row dark:divide-gray-300">
 		<ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
-			<li className="text-red-800"><b>Marvel's</b></li>
+			<li className="text-red-800 font-bold">Marvel's</li>
 			<li><a href="">Inicio</a></li>
       <li><a href="">Mundo</a></li>
       <li><a href="">Compras</a></li>
