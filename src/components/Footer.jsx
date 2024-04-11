@@ -8,9 +8,8 @@ return(
       <li><a href="">Mundo</a></li>
       <li><a href="">Compras</a></li>
       <li><a href="">Contacto</a></li>
-      
 		</ul>
-		<div className="flex flex-col justify-center pt-6 lg:pt-0">
+		<div className="flex flex-col justify-center pt-2 lg:pt-0">
 			<div className="flex justify-center space-x-4">
 				<a rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-default-600 dark:text-gray-50">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-4 h-4">
@@ -47,7 +46,3 @@ return(
 )
 }
 export default Footer
-
-{/* <footer className="p-2 bg-slate-700 text-white text-xs text-center">
-        <p> &copy; Copyright 2024 - Ezequiel Muzaber</p>
-      </footer> */}

@@ -1,19 +1,22 @@
-/* import { MenuOutlined } from "@ant-design/icons"; */
-/* import { SquareMenu } from "lucide-react"; */
 import { Menu } from "lucide-react";
 import CartWidget from "./CartWidget";
+import SubMenu from "./SubMenu";
+
 
 
 
 function NavBar() {
 
     return (
-        <nav className="hidden md:flex md:gap-4">
+        <nav className="flex gap-4">
+            <div className="hidden md:flex md:gap-4">
             <a href="#" className="mr-4">Inicio</a>
-            <a href="#" className="mr-4">Mundo</a>
+                <SubMenu/>
                 <CartWidget/>
             <a href="#" className="mr-4">Contacto</a>
-            <Menu />
+            </div>
+            {/* falta que el icono Menu -> tenga accion y se muestre todo el menu dentro de el */}
+            <Menu  className="md:hidden"/>
         </nav>
     );
 }
