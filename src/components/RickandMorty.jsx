@@ -6,7 +6,7 @@ import { Button } from "antd";
 function RickandMorty({character}) {
     const {name, image,species,status} = character
     //const [contador,setCounter] =useState(0)
-    console.log(character)
+    
     const [mostrarInfoExtra, setMostrarInfoExtra] = useState(false);
     const handleClick = () =>{
         //setCounter(contador +1) 

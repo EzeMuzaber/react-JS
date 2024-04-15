@@ -12,11 +12,11 @@ function UserCard({character}) {
 }
     return (
         /* condicional ternario */
-        <div className="user-card p-4 rounded-md shadow-md hover:scale-105 transition group">
-            <div className="overflow-hidden aspect-video">
-                <img className="w-full rounded-md grayscale group-hover:grayscale-0 group-hover:scale-150
+        <div className="user-card p-4 grid-cols-2 rounded-md shadow-md  group">
+                <div className="overflow-hidden aspect-auto">
+                    <img className="w-full rounded-md grayscale group-hover:grayscale-0 group-hover:scale-150
                  duration-500"src={image} alt="card image" />
-            </div>
+                </div>
             <h2 className="my-2 font-bold">{name}</h2>
             <Button>ver mas</Button>
         </div>
