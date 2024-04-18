@@ -9,7 +9,6 @@ const items = [
       <Link to="/Personajes">Personajes</Link>
       
     ),
-    
   },
   {
     key: '2',

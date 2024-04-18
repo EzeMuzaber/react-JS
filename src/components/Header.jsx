@@ -11,7 +11,6 @@ function Header() {
       <Routes>
         <Route path="/Personajes" element={
           <input type="text" placeholder="Buscar Personajes" className="p-1 rounded-md"/>
-                    
           }/>
       </Routes>
       <NavBar/>

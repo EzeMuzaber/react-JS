@@ -59,7 +59,7 @@ function Main() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Personajes" element={<Personajes />} />
-        <Route path="/category/:" element={<Personajes />} />
+        <Route path="/category/:categoria" element={<Personajes />} />
         <Route path="/item/:id" element={<ItemListContainer />} />
         <Route path="/MundoPelis" element={<MundoPelis />} />
         <Route path="/MundoSeries" element={<MundoSeries />} />
