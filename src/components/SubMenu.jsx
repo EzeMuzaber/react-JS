@@ -1,6 +1,7 @@
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
+
 const items = [
   {
     key: '1',
@@ -8,6 +9,7 @@ const items = [
       <Link to="/Personajes">Personajes</Link>
       
     ),
+    
   },
   {
     key: '2',
@@ -15,24 +17,22 @@ const items = [
     ejemplo: mundo thor (un martillo) o mundo flash (un rayo) 
     cambiar tambien el enlace de href mas adelante y ponerle el de la propia pagina*/
     label: (
-      <Link to="/MundoPelis">Mundo Pelis  <SmileOutlined /></Link>
+      <Link to="/category/Human">Humanos  <SmileOutlined /></Link>
     ),
-    
-    disabled: false,
   },
   {
     key: '3',
     label: (
-      <Link to="/MundoSeries">Mundo Series  <SmileOutlined /></Link>
+      <Link to="/category/Alien">Aliens  <SmileOutlined /></Link>
+      /* <Link to="/MundoSeries">Mundo Series  <SmileOutlined /></Link> */
     ),
-    disabled: false,
   },
-  {
+  /* {
     key: '4',
     danger: true,
     label: 'a danger item',
     disabled: true,
-  },
+  }, */
 ];
 const SubMenu = () => (
   <Dropdown
