@@ -1,12 +1,12 @@
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
+import { Link } from 'react-router-dom';
 const items = [
   {
     key: '1',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        Personajes
-      </a>
+      <Link to="/Personajes">Personajes</Link>
+      
     ),
   },
   {
@@ -15,9 +15,7 @@ const items = [
     ejemplo: mundo thor (un martillo) o mundo flash (un rayo) 
     cambiar tambien el enlace de href mas adelante y ponerle el de la propia pagina*/
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-        2nd menu item <SmileOutlined />
-      </a>
+      <Link to="/MundoPelis">Mundo Pelis  <SmileOutlined /></Link>
     ),
     
     disabled: false,
@@ -25,9 +23,7 @@ const items = [
   {
     key: '3',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-        3rd menu item 
-      </a>
+      <Link to="/MundoSeries">Mundo Series  <SmileOutlined /></Link>
     ),
     disabled: false,
   },
@@ -35,6 +31,7 @@ const items = [
     key: '4',
     danger: true,
     label: 'a danger item',
+    disabled: true,
   },
 ];
 const SubMenu = () => (

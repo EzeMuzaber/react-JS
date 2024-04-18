@@ -1,9 +1,10 @@
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
     return (     
         <div className="flex">
-            <a href="#" className="mr-4 ">Compras </a>
+            <Link to="/Carrito" className="mr-4">Carrito </Link>
             <ShoppingCart>
             </ShoppingCart>
             <span>2</span>

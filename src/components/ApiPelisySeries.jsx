@@ -49,7 +49,7 @@ function ApiPelisySeries({ movie }) {
         <div>
             <div className="user-card p-4 rounded-md shadow-md  group">
                 <div className="overflow-hidden aspect-auto relative">
-                    <img className="w-full rounded-md grayscale group-hover:grayscale-0 group-hover:scale-125 duration-500 cursor-pointer"
+                    <img className={`w-full rounded-md grayscale group-hover:grayscale-0 duration-500 cursor-pointer ${imagenAmpliada ? 'scale-normal' : 'group-hover:scale-125'}`}
                         src={`https://image.tmdb.org/t/p/w500/${imagen}`} alt="card image" onClick={handleImageClick} />
                     <div className="absolute bottom-2 right-2 text-violet-500 p-1 font-bold">
                         <FontAwesomeIcon icon={faCircleNotch} className="mr-1" /> {porcentajeVoto}%

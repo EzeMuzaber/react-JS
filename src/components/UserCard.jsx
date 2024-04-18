@@ -1,8 +1,5 @@
-import { Button } from "antd";
+
 import { useState } from "react";
-
-
-
 
 function UserCard({character}) {
     const {name, image} = character
@@ -18,7 +15,6 @@ function UserCard({character}) {
                  duration-500"src={image} alt="card image" />
                 </div>
             <h2 className="my-2 font-bold">{name}</h2>
-            <Button>ver mas</Button>
         </div>
     )
 }
