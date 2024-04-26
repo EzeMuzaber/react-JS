@@ -8,6 +8,7 @@ return(
 			<Link to="/Home" className="mr-4">Inicio</Link>
 			<Link to="/Personajes" className="mr-4">Personajes</Link>
 			<Link to="/MundoPelis" className="mr-4">Mundo Pelis</Link>
+			<Link to="/MundoSeries" className="mr-4">Mundo Series</Link>
 			<Link to="/Carrito" className="mr-4">Carrito</Link>
 			<Link to="/Contacto" className="mr-4">Contacto</Link>
 		</ul>

@@ -9,9 +9,9 @@ function Header() {
       <h1 id="titulo" className="titulo header__title font-bold"> Todito</h1>
 
       <Routes>
-        <Route path="/Personajes" element={
+        {/* <Route path="/Personajes" element={
           <input type="text" placeholder="Buscar Personajes" className="p-1 rounded-md"/>
-          }/>
+          }/> */}
       </Routes>
       <NavBar/>
     </header>

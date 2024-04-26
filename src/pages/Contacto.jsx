@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import {
   Checkbox, DatePicker, Form, Input, Radio,
@@ -14,18 +15,43 @@ const normFile = (e) => {
 };
 
 const Contacto = () => {
+  
+  const [nombreError, setNombreError] = useState(false);
+  const [apellidoError, setApellidoError] = useState(false);
+  
+  const handleChangeNombre = (e) => {
+    const inputValue = e.target.value;
+    const onlyLettersAndSpacesRegex = /^[A-Za-z ]+$/;
+  
+    if (!onlyLettersAndSpacesRegex.test(inputValue)) {
+      setNombreError(true);
+    } else {
+      setNombreError(false);
+    }
+  }
+  const handleChangeApellido = (e) => {
+    const inputValue = e.target.value;
+    const onlyLettersAndSpacesRegex = /^[A-Za-z ]+$/;
+
+    if (!onlyLettersAndSpacesRegex.test(inputValue)) {
+      setApellidoError(true);
+    } else {
+      setApellidoError(false);
+    }
+  };
   return (
     <div className='flex justify-center items-center min-h-screen bg-zinc-700'>
       
       <Form className='p-12 border  mt-10 grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-gray-200'>
       <h1 className='text-2xl font-bold'>Nos gustaria conocerte un poco</h1>
         <div className='grid gap-2'>
-          <Form.Item label="Nombres">
-            <Input />
+
+          <Form.Item label="Nombre" validateStatus={nombreError ? 'error' : ''} help={nombreError ? 'Solo letras' : ''}>
+            <Input onChange={handleChangeNombre}/>
           </Form.Item>
 
-          <Form.Item label="Apellido">
-            <Input />
+          <Form.Item label="Apellido" validateStatus={apellidoError ? 'error' : ''} help={apellidoError ? 'Solo letras' : ''}>
+            <Input onChange={handleChangeApellido}/>
           </Form.Item>
 
           <Form.Item

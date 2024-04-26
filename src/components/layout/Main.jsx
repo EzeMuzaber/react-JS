@@ -1,13 +1,13 @@
-import Timer from "./Timer";
-import ApiWeather from "./ApiWeather";
+import Timer from "../Timer";
+import ApiWeather from "../api/ApiWeather";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Home from "../pages/Home";
-import Personajes from "../pages/Personajes";
-import ItemListContainer from "../pages/ItemListContainer";
-import MundoPelis from "../pages/MundoPelis";
-import MundoSeries from "../pages/MundoSeries";
-import Contacto from "../pages/Contacto";
-import Carrito from "../pages/Carrito";
+import Home from "../../pages/Home";
+import Personajes from "../../pages/Personajes";
+import ItemListContainer from "../../pages/ItemListContainer";
+import MundoPelis from "../../pages/MundoPelis";
+import MundoSeries from "../../pages/MundoSeries";
+import Contacto from "../../pages/Contacto";
+import Carrito from "../../pages/Carrito";
 
 
 function Main() {

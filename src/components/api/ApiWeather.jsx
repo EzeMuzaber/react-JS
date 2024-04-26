@@ -39,7 +39,6 @@ class WeatherComponent extends Component {
     if (error) {
       return <div>{error}</div>;
     }
-    //https://openweathermap.org/img/wn/10d@2x.png
     const iconUrl = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
 
     return (

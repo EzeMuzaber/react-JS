@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Pagination } from 'antd';
 import RickandMorty from '../components/RickandMorty'
 import { useParams } from 'react-router-dom'
 
@@ -8,6 +9,8 @@ function Personajes() {
   /* Ricky and morty */
   const [characters, setCharacters] = useState([])
   const params = useParams()
+  const [page, setPage] = useState(1)
+  const charactersPerPage = 20; 
 
   useEffect(() => {
    let pedido;
@@ -15,11 +18,11 @@ function Personajes() {
    if(params.categoria){
     pedido = fetch("https://rickandmortyapi.com/api/character/?species="+params.categoria)
    }else{
-    pedido = fetch("https://rickandmortyapi.com/api/character")
+    pedido = fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
      
    }
   
-    /* fetch("https://rickandmortyapi.com/api/character") */
+  
       pedido.then((res) => {
         return res.json()
       })
@@ -29,7 +32,11 @@ function Personajes() {
       .catch((err) => {
         console.log(err)
       })
-  }, [params.categoria])
+  }, [params.categoria, page])
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+  };
   return (
     <main className='p-4 grow' title="Home">
     <section className="grid users gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
@@ -37,6 +44,15 @@ function Personajes() {
           return <RickandMorty key={character.id} item={character} />
         })}
         </section>
+        <div className="pagination flex justify-center mt-4">
+        <Pagination
+          current={page}
+          total={charactersPerPage * characters.length}
+          pageSize={charactersPerPage}
+          onChange={handlePageChange}
+          showSizeChanger={false}
+        />
+      </div>
   </main>
   )
 }
