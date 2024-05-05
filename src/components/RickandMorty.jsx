@@ -5,10 +5,6 @@ import { Button } from "antd";
 function RickandMorty({item}) {
     const {name, image,id} = item
 
-    /* const handleClick = () =>{
-        setMostrarInfoExtra(!mostrarInfoExtra);
-    } */
-
     return (
         <div>
             <div className="user-card p-4 rounded-md shadow-md  group">

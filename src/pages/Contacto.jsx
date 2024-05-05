@@ -126,7 +126,7 @@ const Contacto = () => {
 
           <Form.Item wrapperCol={{ offset: 8, span: 24 }}>
             <Button type="primary" htmlType="submit" className='bg-blue-500'>
-              Submit
+              Enviar
             </Button>
           </Form.Item>
         </div>

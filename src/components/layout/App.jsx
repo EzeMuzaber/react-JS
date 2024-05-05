@@ -2,13 +2,16 @@ import Header from "./Header"
 import Main from "./Main"
 import Footer from "./Footer";
 import { BrowserRouter } from "react-router-dom"
+import CustomContext from "../../miContexto"
 
-  function App() {
+function App() {
   return (
     <BrowserRouter>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <CustomContext>
+        <Header />
+        <Main />
+        <Footer />
+      </CustomContext>
     </BrowserRouter>
   );
 }

@@ -14,7 +14,7 @@ esProgramador={true}
 lenguajes={["js", "reactJS"]}
 direccion={{ direccion: "calle falsa", numero: 3400 }}
 /> 
-
+--------------------------------------------------------------------------
 PARA CREAR UN CARRITO CON CONTADOR:
 contador:
 import { ShoppingCart } from "lucide-react";
@@ -44,7 +44,6 @@ function NavBar() {
     )
 }
 
-
 //const [count, setCount] = useState(0)
  /* <>
       <div>
@@ -66,7 +65,7 @@ function NavBar() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> 
     </>
    */
 

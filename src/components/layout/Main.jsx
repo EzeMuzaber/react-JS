@@ -1,4 +1,4 @@
-import Timer from "../Timer";
+import Timer from "../widgets/Timer";
 import ApiWeather from "../api/ApiWeather";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "../../pages/Home";
@@ -17,13 +17,13 @@ function Main() {
   const getTitle = () => {
     switch (location.pathname) {
       case "/":
-        return "Bienvenidos a de Todito";
+        return "Bienvenidos a de 𓆩『𝐿Ꭷ𝓚 𝒊』𓆪";
       case "/Personajes":
         return "Bienvenido a Personajes";
       case "/MundoPelis":
         return "Bienvenido a Mundo de Películas";
-      /* case "/MundoSeries":
-        return "Bienvenido a Mundo de Series"; */
+      case "/MundoSeries":
+        return "Bienvenido a Mundo de Series"; 
         case "/category/Human":
         return "Humanos";
         case "/category/Alien":
@@ -33,13 +33,13 @@ function Main() {
       case "/Contacto":
         return "Contáctanos";
       default:
-        return "Bienvenidos a de Todito";
+        return "Bienvenidos a 𓆩『𝐿Ꭷ𝓚 𝒊』𓆪";
     }
   };
 
   return (
 
-    <main className='p-4 grow' title="Home">
+    <main className='p-4 grow bg-gray-200' title="Home">
 
       {/* inicio fecha y hora */}
       <div className="flex justify-between items-center ">
@@ -48,8 +48,8 @@ function Main() {
         </div>
 
         {/* titulo de la pagina por un itemListContainer */}
-        <div className="mx-auto p-6 font-bold size-30 text-xl">
-          <h1>{getTitle()}</h1>
+        <div className="mx-auto p-6 font-bold ">
+          <h1 className="text-green-700 font-bold  lg:text-xl xl:text-2xl">{getTitle()}</h1>
         </div>
 
         {/* api del clima */}
@@ -57,7 +57,7 @@ function Main() {
       </div>
       {/* fin fecha y hora y api del clima */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Personajes" element={<Personajes />} />
         <Route path="/category/:categoria" element={<Personajes />} />
         <Route path="/item/:id" element={<ItemListContainer />} />
