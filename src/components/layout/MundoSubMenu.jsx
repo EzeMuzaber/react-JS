@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
       {
         key: '1',
         label: (
-          <Link to="/MundoPelis">Mundo Pelis </Link>
+          <Link to="/MundoPelis" className='text-lg'>Mundo Pelis </Link>
         ),
       },
       {
         key: '2',
         label: (
-          <Link to="/MundoSeries">Mundo Series </Link>
+          <Link to="/MundoSeries" className='text-lg'>Mundo Series </Link>
         ),
       },
     ];

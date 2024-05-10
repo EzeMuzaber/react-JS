@@ -3,30 +3,29 @@ import { Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
 
 const items = [
-  
   {
     key: '1',
     label: (
-      <Link to="/Personajes" >Personajes</Link>
+      <Link to="/Personajes" className='text-lg' >Personajes</Link>
       
     ),
   },
   {
     key: '2',
     label: (
-      <Link to="/category/Human">Humanos  <SmileOutlined /></Link>
+      <Link to="/category/Human" className='text-lg'>Humanos  <SmileOutlined /></Link>
     ),
   },
   {
     key: '3',
     label: (
-      <Link to="/category/Alien">Aliens <RedditOutlined /></Link>
+      <Link to="/category/Alien" className='text-lg'>Aliens <RedditOutlined /></Link>
       
     ),
   },
 ];
 const SubMenu = () => (
-  <Dropdown
+  <Dropdown  
     menu={{
       items,
     }}

@@ -10,7 +10,10 @@ function Contador(props) {
     }
 
     const decrementar = () => {
-        setNumero(numero - 1)
+        if (numero > 0){
+            setNumero(numero - 1)
+        }
+        
     }
 
     const confirmar = (cantidad) => {
@@ -22,7 +25,7 @@ function Contador(props) {
 
     return (
         <div>
-            <div className="flex gap-4 p-4 text-center">
+            <div className="flex gap-4 p-4 justify-center">
 
                 <p>Cantidad:</p>
                 <Button onClick={decrementar} className=" text-black bg-white rounded-full">-</Button>

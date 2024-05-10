@@ -4,6 +4,36 @@ styled components
 tailwind <- recomienda este
 boostrap    
 ant design
+--------------------------------------------------------------------------------
+LLAMADA QUE FUNCIONA EN EL FIREBASE:
+
+const db = getFirestore(app)
+
+    const productsCollection = collection(db, "products");
+    const query = getDocs(productsCollection)
+
+    query
+      .then((res) => {
+        console.log(res)
+        const products = res.docs.map(doc => { return doc.data() })
+        //console.log(products)
+        setCharacters( products )
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 **uso de props**
@@ -165,3 +195,63 @@ const handleClick = () =>{
         </div>
     </div>
 ); */
+
+
+
+CONECCION FIREBASE CON API (SIN FUNCIONAR)
+/* const db = getFirestore(app)
+    const charactersColection = collection(db, "characters")
+    const query = getDocs(charactersColection)
+
+    query.then((res ) => { 
+      const characters = res.docs.map((doc) => {return doc.data()})
+      setItem(characters)
+    })
+    .catch((error) => {
+      console.log(error)
+    }); */
+  /*   const db = getFirestore(app);
+    const charactersCollection = collection(db, "characters");
+
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(charactersCollection);
+        const charactersData = querySnapshot.docs.map(doc => doc.data());
+        setItem(charactersData);
+      } catch (error) {
+        console.error("Error fetching characters:", error);
+      }
+    };
+    fetchData();
+  }, [id]); */
+
+  especificaciones tecnicas de como hacerlo:
+
+  //1) loguear a react con firebase
+//2) entrar a la base de datos del proyecto (getFirestore)
+
+/* const app = initializeApp(firebaseConfig)
+const db = getFirestore(app)
+ */
+//console.log(db)
+
+//3) crear una coleccion (collection)
+
+//const charactersColection = collection(db, "characters")
+
+//console.log(charactersColection)
+
+//4) ahora puedo hacer una consulta
+
+/* const query = getDocs(charactersColection)
+query.then((res) => {
+  console.log(res)
+  console.log(res.docs)
+  const characters = res.docs.map((doc) => {
+    return doc.data()
+  })
+  console.log(characters)
+})
+.catch((error) => {
+  console.log(error)
+}); * 0/

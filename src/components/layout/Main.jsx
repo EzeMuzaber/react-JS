@@ -10,6 +10,7 @@ import Contacto from "../../pages/Contacto";
 import Carrito from "../../pages/Carrito";
 
 
+
 function Main() {
   const location = useLocation();
 
@@ -60,6 +61,8 @@ function Main() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Personajes" element={<Personajes />} />
         <Route path="/category/:categoria" element={<Personajes />} />
+        {/* <Route path="/category/Humanos" element={<Personajes />} />
+        <Route path="/category/Aliens" element={<Personajes />} /> */}
         <Route path="/item/:id" element={<ItemListContainer />} />
         <Route path="/MundoPelis" element={<MundoPelis />} />
         <Route path="/MundoSeries" element={<MundoSeries />} />

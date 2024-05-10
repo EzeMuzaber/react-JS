@@ -11,31 +11,33 @@ function CarritoProvider(props) {
     const [cantCarrito, setCantCarrito] = useState(0)
     const [precioTotal, setPrecioTotal] = useState(0)
 
-    //console.log(props.children)
-
     const agregarAlCarrito = (cantidad, item) => {
-        console.log(cantidad, item)
-        const copia = [...carrito]
-        copia.push({ item, cantidad })
-        setCarrito(copia)
-        console.log(copia)
-        setCarrito([...carrito, { item, cantidad }])
-        setCantCarrito(cantCarrito + cantidad)
-        console.log("agregando")
+        const encontrado = carrito.find(producto => producto.item.id === item.id);
+        let copia;
+        if (encontrado) {
+            const copia = [...carrito];
+            copia.forEach(producto => {
+                if (producto.item.id === item.id) {
+                    producto.cantidad += cantidad;
+                }
+            })
+            setCarrito(copia);
+        }else{
+            setCarrito([...carrito, { item, cantidad }])
+        }
+        setCantCarrito(cantCarrito + cantidad);
     }
 
     const borrarItemDelCarrito = (item) => {
-        console.log("borrando item")
+      
         const nuevoCarrito = carrito.filter(producto => producto.item.id !== item.id);
         const cantidadEliminada = carrito.filter(producto => producto.item.id === item.id).reduce((total, producto) => total + producto.cantidad, 0);
         setCarrito(nuevoCarrito);
         setCantCarrito(cantCarrito - cantidadEliminada);
     }
-    const borrarCantidad = (id) => {
+    /* const borrarCantidad = (id) => {
 
-        console.log("borrando cantidad")
-
-    }
+    } */
     const restarCantidad = (id) => {
     const nuevoCarrito = carrito.map((item) => {
         if (item.item.id === id) {
@@ -46,10 +48,8 @@ function CarritoProvider(props) {
         });
         setCarrito(nuevoCarrito);
         setCantCarrito(cantCarrito - 1);
-        console.log("restando")
     }
     const vaciarCarrito = () => {
-        console.log("vaciando carrito completo")
         setCarrito([])
         setCantCarrito(0)
         setprecioTotal(0)
@@ -58,24 +58,22 @@ function CarritoProvider(props) {
     }
     const estaEnCarrito = (cantidad, item) => {
 
-    console.log("que hay en el carrito")
+            /* ojo aca que yo le puse otro nombre a lo que tengo en el carrito para que lo muestre */
     }
 
     const ValorActual = {
         carrito: carrito,
         cantCarrito: cantCarrito,
         precioTotal: precioTotal,
-        //isloggedIn: false,
 
+        //setCarrito: setCarrito,
         agregarAlCarrito: agregarAlCarrito,
         estaEnCarrito: estaEnCarrito,
         borrarItemDelCarrito: borrarItemDelCarrito,
-        borrarCantidad: borrarCantidad,
+        //borrarCantidad: borrarCantidad,
         restarCantidad: restarCantidad,
         vaciarCarrito: vaciarCarrito
     }
-
-
     return (
         <Provider value={ValorActual}>
             {props.children}
