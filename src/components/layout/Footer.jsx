@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 function Footer() {
 	return (
-		<footer className="bg-gray-800 text-xl text-white ">
-			<div className="container flex flex-col p-2  m-2 md:p-1 lg:flex-row dark:divide-gray-300">
-				<ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
+		<footer className="bg-gray-800 text-lg text-white">
+			<div className="container flex flex-col md:p-1 lg:flex-row dark:divide-gray-300">
+				<ul className="self-center py-4 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
 					<li className="text-green-600 font-bold">𓆩『𝐿Ꭷ𝓚 𝒊』𓆪</li>
 					<Link to="/Home" className="mr-4">Inicio</Link>
 					<Link to="/Personajes" className="mr-4">Personajes</Link>

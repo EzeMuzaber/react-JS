@@ -4,9 +4,7 @@ tengo 29 años y estoy emprendiendo este trayecto de Desarrollador Web Full Stac
 
 # Loki: Integracion de APIs y gestion de venta
 
-# React + Vite
-
-Loki es un proyecto desarrollado como parte del curso de React JS en CoderHouse. Se trata de una aplicación que integra diversas APIs para proporcionar información actualizada sobre el clima, series y películas, así como una base de datos en Firebase relacionada con la serie "Rick and Morty". Además, incluye un reloj en tiempo real que muestra la hora y la fecha actual.
+Loki es un proyecto desarrollado como parte del curso de React JS + vite en CoderHouse. Se trata de una aplicación que integra diversas APIs para proporcionar información actualizada sobre el clima, series y películas, así como una base de datos en Firebase relacionada con la serie "Rick and Morty". Además, incluye un reloj en tiempo real que muestra la hora y la fecha actual.
 
 El objetivo principal de este proyecto es explorar el mundo de las APIs de películas y series, proporcionando a los usuarios la posibilidad de visualizar portadas y descripciones en un solo lugar. Además, se implementó un sistema de gestión de ventas utilizando la página de "Rick and Morty" como ejemplo. Este sistema permite realizar compras de tarjetas, que son almacenadas en Firebase, y luego se generan tickets de venta que muestran la información correspondiente.
 
@@ -22,6 +20,15 @@ Install reactJS with npm
     iniciar vista de pagina: npm run dev
 ```
     
+
+## Enlaces
+
+pagina operativa: https://react-js-ten-amber.vercel.app/
+
+Carpeta Drive con video demostrativo de la pagina:
+https://drive.google.com/drive/folders/12hedyhdisRgFJCwbtoi33VbwkpnEJG_y?usp=sharing
+
+
 ## Tecnologias Usadas
 1. antd -- version: 5.15.3
 2. axios -- version: 1.6.8

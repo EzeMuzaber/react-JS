@@ -12,10 +12,10 @@ function NavBar() {
     }
     return (
         <>
-            <nav className="flex gap-4 text-xl">
-                <div className="hidden md:flex md:gap-4 text-xl">
+            <nav className="flex gap-4 text-lg">
+                <div className="hidden md:flex md:gap-4 text-lg">
                     <Link to="/Home" className="mr-4">Inicio</Link>
-                    <SubMenu className="text-xl" />
+                    <SubMenu />
                     <MundoSubMenu className="bg-gray-800" />
                     <CartWidget className="bg-gray-800" />
                     <Link to="/Contacto" className="mr-4">Contacto</Link>

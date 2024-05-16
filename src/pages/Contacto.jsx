@@ -35,15 +35,13 @@ const Contacto = () => {
     setSubmitted(true);
   };
   return (
-    <div className='flex justify-center items-center min-h-screen bg-zinc-700'>
-      
+    <div className='flex justify-center items-center min-h-screen p-12 bg-zinc-700'>
       <Form 
-      className='p-12 border  mt-10 grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-gray-200'
+      className='p-10 border grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-gray-200'
       onFinish={handleSubmit}
       initialValues={{ newsletter: true }}>
       <h1 className='text-2xl font-bold'>Nos gustaria conocerte un poco</h1>
         <div className='grid gap-2'>
-
           <Form.Item label="Nombre" validateStatus={nombreError ? 'error' : ''} help={nombreError ? 'Solo letras' : ''}>
             <Input onChange={handleChangeNombre}/>
           </Form.Item>

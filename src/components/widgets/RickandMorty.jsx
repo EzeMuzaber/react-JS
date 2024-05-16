@@ -17,7 +17,6 @@ function RickandMorty({ item }) {
                 </Button>
             </div>
         </div>
-
     )
 
 }
