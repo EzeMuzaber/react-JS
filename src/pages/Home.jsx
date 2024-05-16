@@ -7,7 +7,6 @@ import { Button } from 'antd';
 
 
 function Home() {
-
   return (
     <div className="p-4 bg-indigo-400">
        <section className="mt-4">

@@ -17,7 +17,6 @@ function ApiPelisySeries({ movie, serie }) {
 
 
     const handleClick = () => {
-        //setCounter(contador +1) 
         setMostrarInfoExtra(!mostrarInfoExtra);
 
     }
@@ -44,14 +43,13 @@ function ApiPelisySeries({ movie, serie }) {
 
     const handleImageClick = () => {
         setImagenAmpliada(!imagenAmpliada);
-        //setImagen(imagenAmpliada ? (imagenPelicula || imagenSerie) : (imagenFondoPelicula || imagenFondoSerie));
+        
         if (imagenAmpliada) {
             setImagen(imagenFondoPelicula || imagenFondoSerie);
         } else {
             setImagen(imagenPelicula || imagenSerie);
         }
     };
-    /* para cambiar forma de foto con: poster_path o para mas chica: backdrop_path */
 
     return (
         <div>

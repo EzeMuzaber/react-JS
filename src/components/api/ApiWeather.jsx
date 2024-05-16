@@ -9,7 +9,6 @@ class WeatherComponent extends Component {
   };
 
   componentDidMount() {
-    // Aquí debes reemplazar 'TU_API_KEY' con la clave de tu API de OpenWeatherMap
     const apiKey = '22cf39fe2656a56eaac91872f1fbd9a4';
     const city = 'Argentina,buenos aires';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -43,8 +42,6 @@ class WeatherComponent extends Component {
 
     return (
       <div>
-        {/* <h2>Información del clima</h2> */}
-        
         <div className='flex'>
         <img src={iconUrl} alt="Icono del clima" />
         <div>
@@ -52,7 +49,6 @@ class WeatherComponent extends Component {
         <p>{weatherData.name}</p>
         </div>
         </div>
-        
       </div>
     );
   }

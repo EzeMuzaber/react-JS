@@ -44,7 +44,6 @@ const CartWidget = () => {
     return (     
             <div className="flex relative">
                 <Link to="/Carrito" className="mr-4">Carrito {' '}</Link>
-                
                 <CartSubMenu />
                 <span>{cantidadCarrito}</span>
             </div>
@@ -52,5 +51,3 @@ const CartWidget = () => {
     );
 }
 export default CartWidget;
-
-/* buscar un componente en mamba o Lucile para el span algo que se vea el numero con estilo */

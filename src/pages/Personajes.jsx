@@ -1,18 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import RickandMorty from '../components/RickandMorty'
+import RickandMorty from '../components/widgets/RickandMorty'
 import { useParams } from 'react-router-dom'
-import { getProducts, getProductsFromCategories } from '../utils'
-
-
+import { getProductsFromCategories } from '../components/firebase/utils'
 
 function Personajes({ limit}) {
-  /* Ricky and morty */
   const [characters, setCharacters] = useState([])
   const params = useParams()
 
   useEffect(() => {
-    /* ESTA ES LA QUE VAAAA!!!! */
     getProductsFromCategories(params.categoria)
     .then((res) => {
       setCharacters(res)
@@ -33,32 +29,3 @@ function Personajes({ limit}) {
   )
 }
 export default Personajes
-
-
-/* let pedido;
-
-   if(params.categoria){
-    pedido = fetch("https://rickandmortyapi.com/api/character/?species="+params.categoria)
-  }else{
-    pedido = fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
-     
-   }
-      pedido.then((res) => {
-        return res.json()
-      })
-      .then((res) => {
-        setCharacters(res.results)
-      })
-      .catch((err) => {
-        console.log(err)
-      }) */
-
-{/* <div className="pagination flex justify-center mt-4">
-          <Pagination
-            current={page}
-            total={charactersPerPage * characters.length}
-            pageSize={charactersPerPage}
-            onChange={handlePageChange}
-            showSizeChanger={false}
-          />
-        </div> */}

@@ -1,34 +1,16 @@
 import React from 'react'
-import { useContext, useState } from 'react'
+import { useContext} from 'react'
 import { contexto } from '../miContexto'
 import { Button } from 'antd'
-import { createSale } from '../utils';
-import { toast } from 'react-toastify';
-
+import { Link} from 'react-router-dom';
 
 function Carrito() {
   const elvalordelcontexto = useContext(contexto);
-  const { carrito, restarCantidad } = useContext(contexto);
-
+  const {carrito, restarCantidad } = useContext(contexto);
   const subTotal = carrito.reduce((total, producto) => {
     return total + (producto.item.price * producto.cantidad);
   }, 0);
 
-  const [metodoPago, setMetodoPago] = useState(null);
-
-  const handleMetodoPago = (metodo) => {
-    setMetodoPago(metodo);
-  }
-
-  const calcularTotal = () => {
-    let total = subTotal;
-    if (metodoPago === "Efectivo") {
-      total *= 0.85;//descuento del 15%
-    } else if (metodoPago === "Tarjeta") {
-      total *= 1.10;//recargo del 10%
-    }
-    return total.toFixed(2);
-  }
   const handleBorrarItem = (item) => {
     elvalordelcontexto.borrarItemDelCarrito(item)
   };
@@ -38,14 +20,9 @@ function Carrito() {
   const handleClearCart = () => {
     elvalordelcontexto.vaciarCarrito();
   }
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    createSale()
-    //toast.loading("procesando compra")
-    //console.log("comprando")
-  }
+
   return (
-    <div className='p-6  text-center '>
+    <div className='p-6  text-center ' >
       <h2 className='text-3xl font-bold ' >Carrito</h2>
       {elvalordelcontexto.carrito.length === 0 ? <p className='text-xl font-bold p-6'>No hay items en el carrito</p> : null}
       <ul className='grid grid-cols-1 gap-4'>
@@ -70,25 +47,13 @@ function Carrito() {
             </div>
           </li>
         ))}
-      </ul>
-
-      <p className='text-xl font-bold p-6'>Sub Total: ${subTotal}</p>
-      <p className='text-xl  p-6'>Metodo de pago: <span className='font-bold'>{metodoPago}</span></p>
-      <div>
-        <Button onClick={() => handleMetodoPago("Efectivo")} className='m-2 bg-blue-400 font-bold'>Efectivo -15%</Button>
-
-        <Button onClick={() => handleMetodoPago("Tarjeta")} className='m-2 bg-red-400 font-bold'>Tarjeta +10%</Button>
-
-      </div>
-      {metodoPago && (
+      </ul>     
         <div>
-          <p className='text-2xl font-bold p-6 text-green-600'>Total ({metodoPago}): ${calcularTotal()}</p>
+          <p className='text-2xl font-bold p-6 text-green-600'>Total: ${subTotal}</p>
           <Button onClick={handleClearCart} className='m-2 bg-red-400 font-bold'>Vaciar carrito</Button>
-          <Button onClick={handleSubmit} className='m-2 bg-green-400 font-bold'>Finalizar compra</Button>
+          <Link to="/Checkout" ><Button className='m-2 bg-green-400 font-bold'>continuar compra</Button></Link>
         </div>
-      )}
     </div>
   )
 }
-
 export default Carrito

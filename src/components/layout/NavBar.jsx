@@ -18,10 +18,8 @@ function NavBar() {
                     <SubMenu className="text-xl" />
                     <MundoSubMenu className="bg-gray-800" />
                     <CartWidget className="bg-gray-800" />
-
                     <Link to="/Contacto" className="mr-4">Contacto</Link>
                 </div>
-
                 <Menu onClick={handleClick} className="md:hidden" />
 
             </nav>

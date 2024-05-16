@@ -3,8 +3,6 @@ import { contexto } from '../../miContexto';
 
 function CartDetail() {
   const elvalordelcontexto = useContext(contexto);
- 
-
   return (
     <div className="p-4 bg-slate-100 hover:bg-gray-300">
          {elvalordelcontexto.carrito.length === 0 ? <p className='text-sm font-bold p-6'>No hay items en el carrito</p> : null}

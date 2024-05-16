@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/layout/App.jsx'
 import './index.css'
-import "./firebase.js"
+import "./components/firebase/firebase.js"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
